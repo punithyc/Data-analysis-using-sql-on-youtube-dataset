@@ -1,22 +1,22 @@
  1.find the no of youtubers in the table
- 
+
 select count(distinct youtuber) from youtube_data_2023
 
- 2. which is the most earliest channel
+2. which is the most earliest channel
 
 select  youtuber,created_year,created_month,created_date,
 dense_rank() over(order by created_year,created_month,created_date) from youtube_data_2023
 
- 3.calculate the no of youtubers in each country
+3.calculate the no of youtubers in each country
 
 select country,count(youtuber) as cnt from youtube_data_2023
 group by country
 
- 4.for each country which category has more youtubers
+4.for each country which category has more youtubers
  
 select country,category ,count(youtuber) as cnt from youtube_data_2023
- group by country,category 
- order by country,category
+group by country,category 
+order by country,category
  
 5.which youtuber got more views in the last 30 days
 
@@ -50,13 +50,14 @@ with cte as (select country,youtuber,uploads,dense_rank() over(partition by coun
 select country,youtuber,uploads from cte
 where rn =1
 
-10.calculate which category youtubers are earning more in each country monthly as well as yearly andround it to 2 decimal
- 
+10.calculate which category youtubers are earning more in each country monthly and round it to 2 decimal
+
 select country,category,round(sum(highest_monthly_earnings),2) as total from youtube_data_2023
 group by country,category
 order by total desc
 
--- 11. which category youtubers are getting more views in each country monthly
+11. which category youtubers are getting more views in each country monthly
+
 select country,category,sum(video_views_for_the_last_30_days) as total_views from youtube_data_2023
 group by country,category
 order by total_views desc
