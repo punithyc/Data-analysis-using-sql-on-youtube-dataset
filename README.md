@@ -95,9 +95,11 @@ where highest_yearly_earnings=(select max(highest_yearly_earnings) from youtube_
 
 *__7.who got more subscribers in the last 30 days__*
 
+```
 select youtuber,subscribers_for_last_30_days from youtube_data_2023 
 where subscribers_for_last_30_days <> "nan"
 order by subscribers_for_last_30_days desc
+```
 
 *__8.find top 5 youtubers for each country containing highest subscribers__*
 
@@ -127,4 +129,7 @@ order by total_views desc
 Through SQL queries and analysis of the YouTube dataset, several insights regarding video trends, engagement, views and income were uncovered
 
 # Resources
-[DataSet-Link](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023)
+*__For more Details__*: [DataSet](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023)
+
+# For Any Queries/Doubts 
+[]
