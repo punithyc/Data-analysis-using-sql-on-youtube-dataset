@@ -39,8 +39,8 @@
 
 # Technologies Used
 
-* *__Excel__*
-* *__Mysql__*
+* *__Excel__*: [Excel](https://www.coursera.org/account/accomplishments/certificate/K7VQVJNJFY6T)
+* *__Mysql__*: [Mysql](https://www.coursera.org/account/accomplishments/certificate/X5VJVTQD2SXT)
 
 # Data Analysis performed SQL
 
