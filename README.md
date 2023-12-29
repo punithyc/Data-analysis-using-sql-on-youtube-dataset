@@ -105,7 +105,7 @@ with cte as(select youtuber,country,subscribers,dense_rank() over(partition by c
 select country,subscribers,youtuber from cte
 where rn<=5
 
-9. find top youtubers for each country who uploaded more videos
+9.find top youtubers for each country who uploaded more videos
 
 with cte as (select country,youtuber,uploads,dense_rank() over(partition by country order by uploads desc) as rn from youtube_data_2023)
 select country,youtuber,uploads from cte
@@ -117,7 +117,7 @@ select country,category,round(sum(highest_monthly_earnings),2) as total from you
 group by country,category
 order by total desc
 
-11. which category youtubers are getting more views in each country monthly
+*__ 11.which category youtubers are getting more views in each country monthly__*
 
 select country,category,sum(video_views_for_the_last_30_days) as total_views from youtube_data_2023
 group by country,category
