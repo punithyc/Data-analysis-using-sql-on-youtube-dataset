@@ -59,33 +59,33 @@
 * 11.which category youtubers are getting more views in each country monthly
 
 # Data Analysis using SQL
-1.find the no of youtubers in the table
+*__1.find the no of youtubers in the table__*
 
 select count(distinct youtuber) from youtube_data_2023
 
-2. which is the most earliest channel
+*__2. which is the most earliest channel__*
 
 select  youtuber,created_year,created_month,created_date,
 dense_rank() over(order by created_year,created_month,created_date) from youtube_data_2023
 
-3.calculate the no of youtubers in each country
+*__3.calculate the no of youtubers in each country__*
 
 select country,count(youtuber) as cnt from youtube_data_2023
 group by country
 
-4.for each country which category has more youtubers
+*__4.for each country which category has more youtubers__*
  
 select country,category ,count(youtuber) as cnt from youtube_data_2023
 group by country,category 
 order by country,category
  
-5.which youtuber got more views in the last 30 days
+*__5.which youtuber got more views in the last 30 days__*
 
 select country,youtuber,video_views_for_the_last_30_days from youtube_data_2023
 order by video_views_for_the_last_30_days desc
 limit 1
 
-6.which youtuber earned more money in every month and every year
+*__6.which youtuber earned more money in every month and every year__*
 
 select youtuber,highest_monthly_earnings from youtube_data_2023
 where highest_monthly_earnings=(select max(highest_monthly_earnings) from youtube_data_2023)
@@ -93,25 +93,25 @@ where highest_monthly_earnings=(select max(highest_monthly_earnings) from youtub
 select youtuber,highest_yearly_earnings from youtube_data_2023
 where highest_yearly_earnings=(select max(highest_yearly_earnings) from youtube_data_2023)
 
-7.who got more subscribers in the last 30 days
+*__7.who got more subscribers in the last 30 days__*
 
 select youtuber,subscribers_for_last_30_days from youtube_data_2023 
 where subscribers_for_last_30_days <> "nan"
 order by subscribers_for_last_30_days desc
 
-8. find top 5 youtubers for each country containing highest subscribers
+*__8.find top 5 youtubers for each country containing highest subscribers__*
 
 with cte as(select youtuber,country,subscribers,dense_rank() over(partition by country order by subscribers desc) as rn from youtube_data_2023)
 select country,subscribers,youtuber from cte
 where rn<=5
 
-9.find top youtubers for each country who uploaded more videos
+*__9.find top youtubers for each country who uploaded more videos__*
 
 with cte as (select country,youtuber,uploads,dense_rank() over(partition by country order by uploads desc) as rn from youtube_data_2023)
 select country,youtuber,uploads from cte
 where rn =1
 
-10.calculate which category youtubers are earning more in each country monthly and round it to 2 decimal
+*__10.calculate which category youtubers are earning more in each country monthly and round it to 2 decimal__*
 
 select country,category,round(sum(highest_monthly_earnings),2) as total from youtube_data_2023
 group by country,category
