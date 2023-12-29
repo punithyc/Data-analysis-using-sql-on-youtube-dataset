@@ -42,7 +42,7 @@
 * *__Excel__*
 * *__Mysql__*
 
-# Analysis Performed On SQL
+# Data Analysis using SQL
 
 ### Problem Statements
 
@@ -58,6 +58,8 @@
 * 10.calculate which category youtubers are earning more in each country monthly and round it to 2 decimal
 * 11.which category youtubers are getting more views in each country monthly
 
+# Conclusion
+Through SQL queries and analysis of the YouTube dataset, several insights regarding video trends, engagement, views and income were uncovered
 
-
+# Resources
 [DataSet-Link](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023)
