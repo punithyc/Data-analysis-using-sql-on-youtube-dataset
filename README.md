@@ -7,7 +7,7 @@
   A collection of YouTube giants, this dataset offers a perfect avenue to analyze and gain valuable insights from the luminaries of the platform. With comprehensive details on top creators' subscriber counts, video views, upload frequency, country of origin, earnings and more
 
 # Key Features
-*__ . rank:__* Position of the YouTube channel based on the number of subscribers<br>
+*__.rank:__* Position of the YouTube channel based on the number of subscribers<br>
 Youtuber: Name of the YouTube channel
 subscribers: Number of subscribers to the channel
 video views: Total views across all videos on the channel
