@@ -152,4 +152,5 @@ Through SQL queries and analysis of the YouTube dataset, several insights regard
 *__For more Details__*: [DataSet](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023)
 
 # For Any Queries/Doubts 
-[linkedin](https://www.linkedin.com/in/punith-yc-2240b6267/)
+[linkedin](https://www.linkedin.com/in/punith-yc-2240b6267/)  [Leetcode](https://leetcode.com/punithyc8688/) [HackerRank](https://www.hackerrank.com/profile/punithyc8688)
+
