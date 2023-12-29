@@ -61,7 +61,9 @@
 # Data Analysis using SQL
 *__1.find the no of youtubers in the table__*
 
+```
 select count(distinct youtuber) from youtube_data_2023
+```
 
 *__2. which is the most earliest channel__*
 
