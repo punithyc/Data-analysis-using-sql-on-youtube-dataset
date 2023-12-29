@@ -2,11 +2,11 @@
 #  YouTube Insights - Data Analysis Using SQL
 *__I am sharing Global YouTube Statistics Insights - A Data Analysis Project performed on SQL in my journey into Data Science.__*
                          
- ### About dataset
+ # About dataset
  
   A collection of YouTube giants, this dataset offers a perfect avenue to analyze and gain valuable insights from the luminaries of the platform. With comprehensive details on top creators' subscriber counts, video views, upload frequency, country of origin, earnings and more
 
-# Key Features
+### Key Features
 
 * *__Rank__* : Position of the YouTube channel based on the number of subscribers<br>
 * *__Youtuber__* : Name of the YouTube channel<br>
