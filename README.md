@@ -39,24 +39,24 @@
 
 # Technologies Used
 
-* Excel
-* Mysql
+* *__Excel__*
+* *__Mysql__*
 
 # Analysis Performed On SQL
 
 ### Problem Statements
 
 * 1.find the no of youtubers in the table
-* 2. which is the most earliest channel
+* 2.which is the most earliest channel
 * 3.calculate the no of youtubers in each country
 * 4.for each country which category has more youtubers
 * 5.which youtuber got more views in the last 30 days
 * 6.which youtuber earned more money in every month and every year
 * 7.who got more subscribers in the last 30 days
-* 8. find top 5 youtubers for each country containing highest subscribers
-* 9. find top youtubers for each country who uploaded more videos
+* 8.find top 5 youtubers for each country containing highest subscribers
+* 9.find top youtubers for each country who uploaded more videos
 * 10.calculate which category youtubers are earning more in each country monthly and round it to 2 decimal
-* 11. which category youtubers are getting more views in each country monthly
+* 11.which category youtubers are getting more views in each country monthly
 
 
 
