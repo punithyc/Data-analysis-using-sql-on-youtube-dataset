@@ -117,7 +117,7 @@ select country,category,round(sum(highest_monthly_earnings),2) as total from you
 group by country,category
 order by total desc
 
-*__ 11.which category youtubers are getting more views in each country monthly__*
+*__11.which category youtubers are getting more views in each country monthly__*
 
 select country,category,sum(video_views_for_the_last_30_days) as total_views from youtube_data_2023
 group by country,category
