@@ -37,4 +37,9 @@
 * *__.Latitude__* : Latitude coordinate of the country's location<br>
 * *__.Longitude__* : Longitude coordinate of the country's location<br>
 
+# Technologies Used
+
+* Excel
+* Mysql
+
 [DataSet-Link](https://www.kaggle.com/datasets/nelgiriyewithana/global-youtube-statistics-2023)
