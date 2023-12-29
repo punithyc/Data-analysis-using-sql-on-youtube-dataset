@@ -8,8 +8,8 @@
 
 # Key Features
 *__.rank:__* Position of the YouTube channel based on the number of subscribers<br>
-Youtuber: Name of the YouTube channel
-subscribers: Number of subscribers to the channel
+Youtuber: Name of the YouTube channel<br>
+subscribers: Number of subscribers to the channel<br>
 video views: Total views across all videos on the channel
 category: Category or niche of the channel
 Title: Title of the YouTube channel
