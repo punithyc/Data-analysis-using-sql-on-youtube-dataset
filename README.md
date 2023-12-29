@@ -70,6 +70,7 @@ select count(distinct youtuber) from youtube_data_2023
 ```
 select  youtuber,created_year,created_month,created_date,
 dense_rank() over(order by created_year,created_month,created_date) from youtube_data_2023
+limit 1
 ```
 
 *__3.calculate the no of youtubers in each country__*
