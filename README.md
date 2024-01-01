@@ -108,7 +108,9 @@ select youtuber,highest_monthly_earnings
 from youtube_data_2023
 where highest_monthly_earnings=(select max(highest_monthly_earnings)
 from youtube_data_2023)
-                        (or)
+
+                      (or)
+
 select youtuber,highest_yearly_earnings
 from youtube_data_2023
 where highest_yearly_earnings=(select max(highest_yearly_earnings)
