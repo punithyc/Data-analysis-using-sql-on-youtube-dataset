@@ -62,28 +62,32 @@
 *__1.find the no of youtubers in the table__*
 
 ```
-select count(distinct youtuber) from youtube_data_2023
+select count(distinct youtuber)
+from youtube_data_2023
 ```
 
 *__2. which is the most earliest channel__*
 
 ```
 select  youtuber,created_year,created_month,created_date,
-dense_rank() over(order by created_year,created_month,created_date) from youtube_data_2023
+dense_rank() over(order by created_year,created_month,created_date)
+from youtube_data_2023
 limit 1
 ```
 
 *__3.calculate the no of youtubers in each country__*
 
 ```
-select country,count(youtuber) as cnt from youtube_data_2023
+select country,count(youtuber) as cnt
+from youtube_data_2023
 group by country
 ```
 
 *__4.for each country which category has more youtubers__*
 
  ```
-select country,category ,count(youtuber) as cnt from youtube_data_2023
+select country,category ,count(youtuber) as cnt
+from youtube_data_2023
 group by country,category 
 order by country,category
  ```
@@ -91,7 +95,8 @@ order by country,category
 *__5.which youtuber got more views in the last 30 days__*
 
 ```
-select country,youtuber,video_views_for_the_last_30_days from youtube_data_2023
+select country,youtuber,video_views_for_the_last_30_days
+from youtube_data_2023
 order by video_views_for_the_last_30_days desc
 limit 1
 ```
@@ -99,17 +104,22 @@ limit 1
 *__6.which youtuber earned more money in every month and every year__*
 
 ```
-select youtuber,highest_monthly_earnings from youtube_data_2023
-where highest_monthly_earnings=(select max(highest_monthly_earnings) from youtube_data_2023)
-
-select youtuber,highest_yearly_earnings from youtube_data_2023
-where highest_yearly_earnings=(select max(highest_yearly_earnings) from youtube_data_2023)
+select youtuber,highest_monthly_earnings
+from youtube_data_2023
+where highest_monthly_earnings=(select max(highest_monthly_earnings)
+from youtube_data_2023)
+                        (or)
+select youtuber,highest_yearly_earnings
+from youtube_data_2023
+where highest_yearly_earnings=(select max(highest_yearly_earnings)
+                                           from youtube_data_2023)
 ```
 
 *__7.who got more subscribers in the last 30 days__*
 
 ```
-select youtuber,subscribers_for_last_30_days from youtube_data_2023 
+select youtuber,subscribers_for_last_30_days
+from youtube_data_2023 
 where subscribers_for_last_30_days <> "nan"
 order by subscribers_for_last_30_days desc
 ```
@@ -117,7 +127,8 @@ order by subscribers_for_last_30_days desc
 *__8.find top 5 youtubers for each country containing highest subscribers__*
 
 ```
-with cte as(select youtuber,country,subscribers,dense_rank() over(partition by country order by subscribers desc) as rn from youtube_data_2023)
+with cte as(select youtuber,country,subscribers,
+dense_rank() over(partition by country order by subscribers desc) as rn from youtube_data_2023)
 select country,subscribers,youtuber from cte
 where rn<=5
 ```
@@ -125,7 +136,8 @@ where rn<=5
 *__9.find top youtubers for each country who uploaded more videos__*
 
 ```
-with cte as (select country,youtuber,uploads,dense_rank() over(partition by country order by uploads desc) as rn from youtube_data_2023)
+with cte as (select country,youtuber,uploads,
+dense_rank() over(partition by country order by uploads desc) as rn from youtube_data_2023)
 select country,youtuber,uploads from cte
 where rn =1
 ```
@@ -133,7 +145,8 @@ where rn =1
 *__10.calculate which category youtubers are earning more in each country monthly and round it to 2 decimal__*
 
 ```
-select country,category,round(sum(highest_monthly_earnings),2) as total from youtube_data_2023
+select country,category,round(sum(highest_monthly_earnings),2) as total
+from youtube_data_2023
 group by country,category
 order by total desc
 ```
@@ -141,7 +154,8 @@ order by total desc
 *__11.which category youtubers are getting more views in each country monthly__*
 
 ```
-select country,category,sum(video_views_for_the_last_30_days) as total_views from youtube_data_2023
+select country,category,sum(video_views_for_the_last_30_days) as total_views
+from youtube_data_2023
 group by country,category
 order by total_views desc
 ```
