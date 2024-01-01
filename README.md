@@ -1,6 +1,6 @@
 
 #  YouTube Insights - Data Analysis Using SQL
-*__I am sharing Global YouTube Statistics Insights - A Data Analysis Project performed on SQL in my journey into Data Science.__*
+*__I am a sharing Global YouTube Statistics Insights - A Data Analysis Project performed on SQL in my journey into Data Science.__*
                          
  # About dataset
  
