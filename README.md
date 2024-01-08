@@ -66,13 +66,15 @@ select count(distinct youtuber)
 from youtube_data_2023
 ```
 
-*__2. which is the most earliest channel__*
+*__2.the top 5 most earliest channels__*
 
 ```
-select  youtuber,created_year,created_month,created_date,
-dense_rank() over(order by created_year,created_month,created_date)
-from youtube_data_2023
-limit 1
+with cte as(select  youtuber,created_year,created_month,created_date,
+dense_rank() over(order by created_year,created_month,created_date)as rn
+from youtube_data_2023)
+select * from cte
+where rn<=5
+
 ```
 
 *__3.calculate the no of youtubers in each country__*
